@@ -1,0 +1,31 @@
+﻿<Window x:Class="SZP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SZP"
+        mc:Ignorable="d"
+        Title="Payment Management" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Wiersz dla informacji o zalogowanym użytkowniku -->
+            <RowDefinition Height="*"/>
+            <!-- Reszta okna dla przycisków akcji -->
+        </Grid.RowDefinitions>
+
+        <!-- Wiersz dla informacji o zalogowanym użytkowniku -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,20,0">
+            <TextBlock x:Name="UsernameTextBlock" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Reszta okna dla przycisków akcji -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20">
+            <Button Content="Add payment" Click="AddPaymentButton_Click" Margin="0,5"/>
+            <Button Content="Edit payment" Click="EditPaymentButton_Click" Margin="0,5"/>
+            <Button Content="Delete payment" Click="DeletePaymentButton_Click" Margin="0,5"/>
+            <Button Content="View payments" Click="ViewPaymentsButton_Click" Margin="0,5"/>
+            <!-- Dodaj inne przyciski zgodnie z Twoimi wymaganiami -->
+        </StackPanel>
+    </Grid>
+</Window>

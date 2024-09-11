@@ -1,0 +1,24 @@
+﻿<Window x:Class="SZP.DeletePaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SZP"
+        mc:Ignorable="d"
+        Title="DeletePaymentWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="PaymentDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Payment ID" Binding="{Binding PaymentId}" />
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" />
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
+                <DataGridTextColumn Header="Customer ID" Binding="{Binding CustomerId}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Delete Selected Payment" Click="DeletePaymentButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,160,0,0" />
+        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Left" Margin="460,160,0,0" VerticalAlignment="Top" Width="75" Click="OkButton_Click"/>
+
+    </Grid>
+</Window>
